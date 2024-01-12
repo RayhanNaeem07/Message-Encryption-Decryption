@@ -16,7 +16,7 @@ public class CipherMachineApp extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initComponents();
         pack();
-        setLocationRelativeTo(null); // Center the frame
+        setLocationRelativeTo(null); 
         setVisible(true);
     }
 
@@ -118,7 +118,7 @@ public class CipherMachineApp extends JFrame {
 
     private void updateKeyVisibility() {
         int selectedIndex = ((JComboBox<?>) ((JPanel) getContentPane().getComponent(0)).getComponent(3)).getSelectedIndex();
-        keyEntry.setVisible(selectedIndex != 7); // Transposition Cipher does not require a key
+        keyEntry.setVisible(selectedIndex != 7); 
     }
 
     public static void main(String[] args) {
@@ -130,7 +130,7 @@ public class CipherMachineApp extends JFrame {
         });
     }
 
-    // Define cipher functions here
+    
 
     private interface CipherFunction {
         String apply(String message, String key, String mode);
@@ -241,12 +241,13 @@ public class CipherMachineApp extends JFrame {
     }
 
     private String playfairCipher(String message, String key, String mode) {
-        // Implement Playfair Cipher logic
+
+        
         return "Playfair Cipher Result";
     }
 
     private String transpositionCipher(String message, String key, String mode) {
-        // Implement Transposition Cipher logic
+        
         return "Transposition Cipher Result";
     }
 
